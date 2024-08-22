@@ -1,0 +1,52 @@
+[
+    {
+        "question": "¿Cuál es el propósito de las pruebas de software?",
+        "options": {
+            "A": "Garantizar que el software esté libre de defectos.",
+            "B": "Identificar defectos en el software.",
+            "C": "Implementar mejoras en el software.",
+            "D": "Aumentar la velocidad del software."
+        },
+        "correctAnswer": "B"
+    },
+    {
+        "question": "¿Qué tipo de prueba se realiza para verificar que un sistema cumple con los requisitos de negocio?",
+        "options": {
+            "A": "Pruebas unitarias",
+            "B": "Pruebas de sistema",
+            "C": "Pruebas de aceptación",
+            "D": "Pruebas de integración"
+        },
+        "correctAnswer": "C"
+    },
+    {
+        "question": "¿Qué técnica de diseño de pruebas se basa en la estructura del código?",
+        "options": {
+            "A": "Pruebas funcionales",
+            "B": "Pruebas basadas en la experiencia",
+            "C": "Pruebas estructurales",
+            "D": "Pruebas basadas en especificaciones"
+        },
+        "correctAnswer": "C"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un objetivo principal de la prueba de software?",
+        "options": {
+            "A": "Reducir el costo del software.",
+            "B": "Eliminar todos los defectos del software.",
+            "C": "Garantizar que el software cumple con los requisitos especificados.",
+            "D": "Aumentar la satisfacción del cliente mediante la mejora de la interfaz de usuario."
+        },
+        "correctAnswer": "C"
+    },
+    {
+        "question": "¿Qué técnica se utiliza para derivar casos de prueba a partir de requisitos?",
+        "options": {
+            "A": "Pruebas estructurales",
+            "B": "Pruebas funcionales",
+            "C": "Pruebas de regresión",
+            "D": "Pruebas de integración"
+        },
+        "correctAnswer": "B"
+    }
+]

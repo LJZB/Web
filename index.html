@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador ISTQB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="time-setup">
+        <label for="minutes">Minutos:</label>
+        <input type="number" id="minutes" class="time-input" min="0" max="60" value="5">
+        <label for="seconds">Segundos:</label>
+        <input type="number" id="seconds" class="time-input" min="0" max="60" value="0">
+        <p id="time-error" style="color: red; display: none;">Por favor, ingrese un tiempo válido.</p>
+    </div>
+    <button id="start-button">Comenzar Simulacro</button>
+
+    <div id="iframe-alert">
+        <p>A continuación comenzará el simulacro del examen, si das clic en 'Continuar' comenzará a contar el tiempo.</p>
+        <button id="continue-button">Continuar</button>
+        <button id="cancel-button">Cancelar</button>
+    </div>
+
+    <div id="iframe-timeout">
+        <p>Se agotó el tiempo</p>
+    </div>
+
+    <div id="question-container">
+        <p id="question"></p>
+        <div id="options-container"></div>
+        <p id="timer">Tiempo restante: 05:00</p>
+    </div>
+
+    <div id="results-container">
+        <h2>Resultados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pregunta</th>
+                    <th>Respuesta Escogida</th>
+                    <th>Correcta</th>
+                    <th>Respuesta Correcta</th>
+                </tr>
+            </thead>
+            <tbody id="results-body">
+            </tbody>
+        </table>
+        <div id="summary">
+            <p>Respuestas correctas: <span id="correct-count"></span></p>
+            <p>Respuestas incorrectas: <span id="incorrect-count"></span></p>
+            <p>Porcentaje: <span id="percentage"></span>%</p>
+            <p id="status"></p>
+        </div>
+        <button id="restart-button">Comenzar de nuevo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
