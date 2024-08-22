@@ -27,6 +27,18 @@ body {
     margin: 20px 0;
 }
 
+#question {
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente para el enunciado */
+    font-weight: bold; /* Hace que el enunciado esté en negrita */
+    margin-bottom: 20px; /* Añade un margen inferior para separación */
+}
+
+.option-label {
+    font-size: 1em; /* Mantén el tamaño de las opciones más pequeño que el enunciado */
+    margin-bottom: 10px; /* Añade un margen inferior para espacio entre opciones */
+}
+
+
 .option-label {
     display: flex;
     align-items: flex-start;
