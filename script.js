@@ -7,7 +7,9 @@ let timeLeft;
 const startButton = document.getElementById('start-button');
 const minutesInput = document.getElementById('minutes');
 const secondsInput = document.getElementById('seconds');
+const numQuestionsInput = document.getElementById('num-questions');
 const timeError = document.getElementById('time-error');
+const questionError = document.getElementById('question-error');
 const iframeAlert = document.getElementById('iframe-alert');
 const iframeTimeout = document.getElementById('iframe-timeout');
 const continueButton = document.getElementById('continue-button');
@@ -43,19 +45,42 @@ function validateTimeInput() {
     return true;
 }
 
+function validateQuestionInput() {
+    const numQuestions = parseInt(numQuestionsInput.value);
+
+    if (isNaN(numQuestions) || numQuestions < 1 || numQuestions > 30) {
+        questionError.style.display = 'block';
+        return false;
+    }
+
+    questionError.style.display = 'none';
+    return true;
+}
+
 function loadQuestions() {
-    fetch('questions.json')
+    fetch('questions_chap01.json')
         .then(response => response.json())
         .then(data => {
-            questions = data.sort(() => 0.5 - Math.random()).slice(0, 3);
+            const numQuestions = parseInt(numQuestionsInput.value);
+            questions = data.sort(() => 0.5 - Math.random()).slice(0, numQuestions);
+            showQuestion();  // Muestra la primera pregunta solo después de cargar las preguntas
         })
         .catch(error => console.error('Error al cargar preguntas:', error));
 }
 
-loadQuestions();
+continueButton.addEventListener('click', () => {
+    iframeAlert.style.display = 'none';
+    document.getElementById('time-setup').style.display = 'none';
+    document.getElementById('question-setup').style.display = 'none';
+    startButton.style.display = 'none';
+    loadQuestions();  // Carga las preguntas y luego muestra la primera
+    questionContainer.style.display = 'block';
+    startTimer();
+});
+
 
 startButton.addEventListener('click', () => {
-    if (validateTimeInput()) {
+    if (validateTimeInput() && validateQuestionInput()) {
         iframeAlert.style.display = 'block';
     }
 });
@@ -63,7 +88,9 @@ startButton.addEventListener('click', () => {
 continueButton.addEventListener('click', () => {
     iframeAlert.style.display = 'none';
     document.getElementById('time-setup').style.display = 'none';
+    document.getElementById('question-setup').style.display = 'none';
     startButton.style.display = 'none';
+    loadQuestions();
     questionContainer.style.display = 'block';
     showQuestion();
     startTimer();
@@ -77,7 +104,7 @@ function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
-    for (let option in currentQuestion.options) {
+     for (let option in currentQuestion.options) {
         const label = document.createElement('label');
         label.classList.add('option-label');
         label.innerHTML = `
