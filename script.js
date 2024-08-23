@@ -102,38 +102,50 @@ function showQuestion() {
     questionTitle.textContent = `Pregunta ${currentQuestionIndex + 1}`;
     questionTitle.style.display = 'block'; // Asegura que el título se muestre
 
-    // Mostrar la pregunta actual (sin el número)
+    // Definir los literales A, B, C, D
+    const literals = ['A', 'B', 'C', 'D'];
+
+    // Obtener las opciones y mezclarlas aleatoriamente
+    const shuffledOptions = Object.entries(currentQuestion.options).sort(() => Math.random() - 0.5);
+
+    // Mostrar la pregunta actual
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
-    for (let option in currentQuestion.options) {
+
+    // Recorrer las opciones mezcladas y crear los elementos HTML con literales asignados
+    shuffledOptions.forEach(([key, value], index) => {
+        const literal = literals[index];
         const label = document.createElement('label');
         label.classList.add('option-label');
         label.innerHTML = `
-            <input type="radio" name="option" class="option-input" value="${option}">
-            <span class="option-text"><b>${option}.</b> ${currentQuestion.options[option]}</span>
+            <input type="radio" name="option" class="option-input" value="${literal}">
+            <span class="option-text"><b>${literal}.</b> ${value}</span>
         `;
+        label.dataset.key = key; // Guardamos la clave correcta para la comparación
+        label.dataset.literal = literal; // Guardamos el literal en el dataset del label
         optionsContainer.appendChild(label);
-    }
+    });
 }
 
 // Manejar la selección de respuestas y almacenar solo la pregunta y la respuesta
 optionsContainer.addEventListener('change', (e) => {
     if (e.target.classList.contains('option-input')) {
-        const selectedOption = e.target.value;
-        const selectedText = `<b>${selectedOption}.</b> ${questions[currentQuestionIndex].options[selectedOption]}`;
-        const correctText = `<b>${questions[currentQuestionIndex].correctAnswer}.</b> ${questions[currentQuestionIndex].options[questions[currentQuestionIndex].correctAnswer]}`;
-        
-        // Guardar solo la pregunta y la respuesta, sin el título ni el número
+        const selectedLabel = e.target.closest('label');
+        const selectedLiteral = selectedLabel.dataset.literal; // Obtenemos el literal del dataset
+        const selectedKey = selectedLabel.dataset.key; // Obtenemos la clave correcta del dataset
+        const selectedText = selectedLabel.querySelector('.option-text').textContent.trim(); // Texto de la opción seleccionada
+
+        // Guardar solo la respuesta seleccionada sin el literal duplicado
+        const currentQuestion = questions[currentQuestionIndex];
+
         userAnswers.push({
-            question: questions[currentQuestionIndex].question, // Solo la pregunta
-            selected: selectedText,
-            correct: selectedOption === questions[currentQuestionIndex].correctAnswer,
-            correctAnswer: correctText
+            question: currentQuestion.question,
+            selected: selectedText, // Solo el texto sin duplicar el literal
+            literal: selectedLiteral, // Guardamos el literal por separado para mostrarlo
+            correct: selectedKey === currentQuestion.correctAnswer, // Comparación correcta usando la clave
+            correctAnswer: `${currentQuestion.options[currentQuestion.correctAnswer]}` // Mostrar la respuesta correcta sin duplicar el literal
         });
 
-        // Marcar la opción seleccionada
-        e.target.checked = true;
-        
         // Retraso de 500ms antes de avanzar a la siguiente pregunta
         setTimeout(() => {
             currentQuestionIndex++;
@@ -146,8 +158,6 @@ optionsContainer.addEventListener('change', (e) => {
         }, 500);
     }
 });
-
-
 
 // Función para iniciar el temporizador
 function startTimer() {
@@ -194,9 +204,9 @@ function showResults() {
 
         row.innerHTML = `
             <td>${answer.question}</td> <!-- La pregunta -->
-            <td>${answer.selected}</td> <!-- Respuesta seleccionada -->
+            <td>${answer.literal}. ${answer.selected}</td> <!-- Respuesta seleccionada con el literal -->
             <td>${answer.correct ? 'Sí' : 'No'}</td> <!-- Correcto o incorrecto -->
-            <td>${!answer.correct ? answer.correctAnswer : ''}</td> <!-- Respuesta correcta -->
+            <td>${answer.correct ? '' : `${answer.literal}. ${answer.correctAnswer}`}</td> <!-- Respuesta correcta sin duplicar -->
         `;
 
         if (answer.correct) correctCount++;

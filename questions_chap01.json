@@ -2,301 +2,301 @@
     {
         "question": "¿Cuál de los siguientes enunciados describe un objetivo de prueba válido?",
         "options": {
-            "A": "Demostrar que no hay defectos sin corregir en el sistema bajo prueba.",
-            "B": "Demostrar que no habrá fallos después de la implementación del sistema en producción.",
-            "C": "Reducir el nivel de riesgo del objeto de prueba y construir confianza en el nivel de calidad.",
-            "D": "Verificar que no hay combinaciones de entradas no probadas."
+            "1": "Demostrar que no hay defectos sin corregir en el sistema bajo prueba.",
+            "2": "Demostrar que no habrá fallos después de la implementación del sistema en producción.",
+            "3": "Reducir el nivel de riesgo del objeto de prueba y construir confianza en el nivel de calidad.",
+            "4": "Verificar que no hay combinaciones de entradas no probadas."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "3"
     },
     {
         "question": "¿Cuál de las siguientes opciones muestra un ejemplo de actividades de prueba que contribuyen al éxito?",
         "options": {
-            "A": "Tener a los probadores involucrados durante varias actividades del ciclo de vida del desarrollo de software (SDLC) ayudará a detectar defectos en los productos de trabajo.",
-            "B": "Los probadores tratan de no molestar a los desarrolladores mientras codifican, para que los desarrolladores escriban un código mejor.",
-            "C": "Los probadores que colaboran con los usuarios finales ayudan a mejorar la calidad de los informes de defectos durante las pruebas integración de componentes y sistema.",
-            "D": "Los probadores certificados diseñarán casos de prueba mucho mejores que los probadores no certificados."
+            "1": "Tener a los probadores involucrados durante varias actividades del ciclo de vida del desarrollo de software (SDLC) ayudará a detectar defectos en los productos de trabajo.",
+            "2": "Los probadores tratan de no molestar a los desarrolladores mientras codifican, para que los desarrolladores escriban un código mejor.",
+            "3": "Los probadores que colaboran con los usuarios finales ayudan a mejorar la calidad de los informes de defectos durante las pruebas integración de componentes y sistema.",
+            "4": "Los probadores certificados diseñarán casos de prueba mucho mejores que los probadores no certificados."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba indica que no se puede probar exhaustivamente todos los casos posibles?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Falacia de la ausencia de errores.",
-            "C": "Las pruebas exhaustivas son imposibles.",
-            "D": "Los defectos se agrupan."
+            "1": "Las pruebas se desgastan.",
+            "2": "Falacia de la ausencia de errores.",
+            "3": "Las pruebas exhaustivas son imposibles.",
+            "4": "Los defectos se agrupan."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "3"
     },
     {
         "question": "¿Cuál de los siguientes describe mejor la diferencia entre pruebas y depuración?",
         "options": {
-            "A": "Las pruebas identifican los defectos; la depuración los corrige.",
-            "B": "Las pruebas son realizadas por desarrolladores; la depuración por probadores.",
-            "C": "La depuración busca fallos; las pruebas buscan mejorar el código.",
-            "D": "Las pruebas son exhaustivas; la depuración es aleatoria."
+            "1": "Las pruebas identifican los defectos; la depuración los corrige.",
+            "2": "Las pruebas son realizadas por desarrolladores; la depuración por probadores.",
+            "3": "La depuración busca fallos; las pruebas buscan mejorar el código.",
+            "4": "Las pruebas son exhaustivas; la depuración es aleatoria."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué se debe hacer cuando se encuentran defectos durante las pruebas?",
         "options": {
-            "A": "Elaborar un informe detallado del defecto y reportarlo al equipo de desarrollo.",
-            "B": "Corregir el defecto inmediatamente y volver a ejecutar la prueba.",
-            "C": "Ignorar el defecto si no afecta la funcionalidad principal.",
-            "D": "Detener todas las pruebas y analizar el defecto con todo el equipo."
+            "1": "Elaborar un informe detallado del defecto y reportarlo al equipo de desarrollo.",
+            "2": "Corregir el defecto inmediatamente y volver a ejecutar la prueba.",
+            "3": "Ignorar el defecto si no afecta la funcionalidad principal.",
+            "4": "Detener todas las pruebas y analizar el defecto con todo el equipo."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué indica el principio de pruebas 'Los defectos se agrupan'?",
         "options": {
-            "A": "La mayoría de los defectos se encuentran en unos pocos módulos.",
-            "B": "Los defectos se distribuyen uniformemente en todo el sistema.",
-            "C": "Cada módulo tiene la misma cantidad de defectos.",
-            "D": "No es posible predecir dónde se encuentran los defectos."
+            "1": "La mayoría de los defectos se encuentran en unos pocos módulos.",
+            "2": "Los defectos se distribuyen uniformemente en todo el sistema.",
+            "3": "Cada módulo tiene la misma cantidad de defectos.",
+            "4": "No es posible predecir dónde se encuentran los defectos."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba explica el escepticismo de un probador cuando no se han identificado nuevos defectos de regresión durante varias iteraciones?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Falacia de la ausencia de errores.",
-            "C": "Los defectos se agrupan.",
-            "D": "Es imposible realizar pruebas exhaustivas."
+            "1": "Las pruebas se desgastan.",
+            "2": "Falacia de la ausencia de errores.",
+            "3": "Los defectos se agrupan.",
+            "4": "Es imposible realizar pruebas exhaustivas."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba afirma que probar solo puede demostrar la presencia de defectos?",
         "options": {
-            "A": "Las pruebas muestran la presencia de defectos.",
-            "B": "Las pruebas exhaustivas son imposibles.",
-            "C": "Las pruebas tempranas ahorran tiempo y dinero.",
-            "D": "Los defectos se agrupan."
+            "1": "Las pruebas muestran la presencia de defectos.",
+            "2": "Las pruebas exhaustivas son imposibles.",
+            "3": "Las pruebas tempranas ahorran tiempo y dinero.",
+            "4": "Los defectos se agrupan."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál es el propósito de las pruebas de software?",
         "options": {
-            "A": "Verificar que el software cumple con los requisitos y está libre de defectos.",
-            "B": "Garantizar que el software no tiene fallos.",
-            "C": "Identificar el mayor número de defectos posible.",
-            "D": "Confirmar que el software cumple con todas las expectativas del cliente."
+            "1": "Verificar que el software cumple con los requisitos y está libre de defectos.",
+            "2": "Garantizar que el software no tiene fallos.",
+            "3": "Identificar el mayor número de defectos posible.",
+            "4": "Confirmar que el software cumple con todas las expectativas del cliente."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál es la diferencia clave entre aseguramiento de la calidad y pruebas?",
         "options": {
-            "A": "El aseguramiento de la calidad se enfoca en los procesos; las pruebas se enfocan en el producto.",
-            "B": "El aseguramiento de la calidad corrige defectos; las pruebas los identifican.",
-            "C": "Las pruebas son parte del aseguramiento de la calidad.",
-            "D": "El aseguramiento de la calidad se realiza después de las pruebas."
+            "1": "El aseguramiento de la calidad se enfoca en los procesos; las pruebas se enfocan en el producto.",
+            "2": "El aseguramiento de la calidad corrige defectos; las pruebas los identifican.",
+            "3": "Las pruebas son parte del aseguramiento de la calidad.",
+            "4": "El aseguramiento de la calidad se realiza después de las pruebas."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba explica que un sistema puede fallar incluso después de haber sido probado exhaustivamente?",
         "options": {
-            "A": "Las pruebas dependen del contexto.",
-            "B": "Las pruebas muestran la presencia de defectos.",
-            "C": "Falacia de la ausencia de defectos.",
-            "D": "Las pruebas se desgastan."
+            "1": "Las pruebas dependen del contexto.",
+            "2": "Las pruebas muestran la presencia de defectos.",
+            "3": "Falacia de la ausencia de defectos.",
+            "4": "Las pruebas se desgastan."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "3"
     },
     {
         "question": "¿Cuál es un riesgo de no involucrar a los probadores desde el principio del desarrollo?",
         "options": {
-            "A": "Los defectos encontrados pueden ser más costosos de corregir.",
-            "B": "El equipo de pruebas no comprenderá completamente el sistema.",
-            "C": "Las pruebas serán menos exhaustivas.",
-            "D": "Los desarrolladores tendrán que hacer más trabajo."
+            "1": "Los defectos encontrados pueden ser más costosos de corregir.",
+            "2": "El equipo de pruebas no comprenderá completamente el sistema.",
+            "3": "Las pruebas serán menos exhaustivas.",
+            "4": "Los desarrolladores tendrán que hacer más trabajo."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué tipo de prueba se centra en identificar defectos antes de que sean enviados a producción?",
         "options": {
-            "A": "Pruebas de validación.",
-            "B": "Pruebas de verificación.",
-            "C": "Pruebas de regresión.",
-            "D": "Pruebas de aceptación."
+            "1": "Pruebas de validación.",
+            "2": "Pruebas de verificación.",
+            "3": "Pruebas de regresión.",
+            "4": "Pruebas de aceptación."
         },
-        "correctAnswer": "B"
+        "correctAnswer": "2"
     },
     {
         "question": "¿Qué principio de prueba sugiere que probar todos los escenarios posibles es inviable?",
         "options": {
-            "A": "Las pruebas exhaustivas son imposibles.",
-            "B": "Las pruebas muestran la presencia de defectos.",
-            "C": "Los defectos se agrupan.",
-            "D": "Las pruebas tempranas ahorran tiempo y dinero."
+            "1": "Las pruebas exhaustivas son imposibles.",
+            "2": "Las pruebas muestran la presencia de defectos.",
+            "3": "Los defectos se agrupan.",
+            "4": "Las pruebas tempranas ahorran tiempo y dinero."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál es el objetivo principal de las pruebas de regresión?",
         "options": {
-            "A": "Identificar defectos en nuevas funcionalidades.",
-            "B": "Garantizar que los cambios recientes no han introducido nuevos defectos.",
-            "C": "Verificar que las nuevas funciones no interfieren con las existentes.",
-            "D": "Evaluar la calidad global del producto después de los cambios."
+            "1": "Identificar defectos en nuevas funcionalidades.",
+            "2": "Garantizar que los cambios recientes no han introducido nuevos defectos.",
+            "3": "Verificar que las nuevas funciones no interfieren con las existentes.",
+            "4": "Evaluar la calidad global del producto después de los cambios."
         },
-        "correctAnswer": "B"
+        "correctAnswer": "2"
     },
     {
         "question": "¿Qué principio de prueba sugiere que los defectos tienden a agruparse en ciertas áreas del sistema?",
         "options": {
-            "A": "Los defectos se agrupan.",
-            "B": "Las pruebas dependen del contexto.",
-            "C": "Las pruebas exhaustivas son imposibles.",
-            "D": "Las pruebas se desgastan."
+            "1": "Los defectos se agrupan.",
+            "2": "Las pruebas dependen del contexto.",
+            "3": "Las pruebas exhaustivas son imposibles.",
+            "4": "Las pruebas se desgastan."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba indica que repetir las mismas pruebas se vuelve menos efectivo?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Las pruebas exhaustivas son imposibles.",
-            "C": "Los defectos se agrupan.",
-            "D": "Las pruebas dependen del contexto."
+            "1": "Las pruebas se desgastan.",
+            "2": "Las pruebas exhaustivas son imposibles.",
+            "3": "Los defectos se agrupan.",
+            "4": "Las pruebas dependen del contexto."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba indica que no se puede probar exhaustivamente todos los casos posibles?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Falacia de la ausencia de errores.",
-            "C": "Las pruebas exhaustivas son imposibles.",
-            "D": "Los defectos se agrupan."
+            "1": "Las pruebas se desgastan.",
+            "2": "Falacia de la ausencia de errores.",
+            "3": "Las pruebas exhaustivas son imposibles.",
+            "4": "Los defectos se agrupan."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "3"
     },
     {
         "question": "¿Qué principio de prueba indica que la realización de pruebas repetitivas en el mismo sistema puede no ser efectiva?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Las pruebas exhaustivas son imposibles.",
-            "C": "Los defectos se agrupan.",
-            "D": "Las pruebas dependen del contexto."
+            "1": "Las pruebas se desgastan.",
+            "2": "Las pruebas exhaustivas son imposibles.",
+            "3": "Los defectos se agrupan.",
+            "4": "Las pruebas dependen del contexto."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál es el propósito de las pruebas de regresión?",
         "options": {
-            "A": "Garantizar que el sistema sigue funcionando después de realizar cambios.",
-            "B": "Identificar defectos en el código existente después de la integración de nuevos módulos.",
-            "C": "Verificar que el sistema es compatible con nuevas versiones de software.",
-            "D": "Evaluar la estabilidad del sistema bajo condiciones extremas."
+            "1": "Garantizar que el sistema sigue funcionando después de realizar cambios.",
+            "2": "Identificar defectos en el código existente después de la integración de nuevos módulos.",
+            "3": "Verificar que el sistema es compatible con nuevas versiones de software.",
+            "4": "Evaluar la estabilidad del sistema bajo condiciones extremas."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba sugiere que probar todos los escenarios posibles es inviable?",
         "options": {
-            "A": "Las pruebas exhaustivas son imposibles.",
-            "B": "Las pruebas muestran la presencia de defectos.",
-            "C": "Los defectos se agrupan.",
-            "D": "Las pruebas tempranas ahorran tiempo y dinero."
+            "1": "Las pruebas exhaustivas son imposibles.",
+            "2": "Las pruebas muestran la presencia de defectos.",
+            "3": "Los defectos se agrupan.",
+            "4": "Las pruebas tempranas ahorran tiempo y dinero."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál de los siguientes describe mejor la diferencia entre pruebas y depuración?",
         "options": {
-            "A": "Las pruebas identifican los defectos; la depuración los corrige.",
-            "B": "Las pruebas son realizadas por desarrolladores; la depuración por probadores.",
-            "C": "La depuración busca fallos; las pruebas buscan mejorar el código.",
-            "D": "Las pruebas son exhaustivas; la depuración es aleatoria."
+            "1": "Las pruebas identifican los defectos; la depuración los corrige.",
+            "2": "Las pruebas son realizadas por desarrolladores; la depuración por probadores.",
+            "3": "La depuración busca fallos; las pruebas buscan mejorar el código.",
+            "4": "Las pruebas son exhaustivas; la depuración es aleatoria."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba sugiere que los defectos tienden a agruparse en ciertas áreas del sistema?",
         "options": {
-            "A": "Los defectos se agrupan.",
-            "B": "Las pruebas dependen del contexto.",
-            "C": "Las pruebas exhaustivas son imposibles.",
-            "D": "Las pruebas se desgastan."
+            "1": "Los defectos se agrupan.",
+            "2": "Las pruebas dependen del contexto.",
+            "3": "Las pruebas exhaustivas son imposibles.",
+            "4": "Las pruebas se desgastan."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué principio de prueba sugiere que repetir las mismas pruebas no siempre identifica todos los defectos?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Las pruebas exhaustivas son imposibles.",
-            "C": "Los defectos se agrupan.",
-            "D": "Las pruebas dependen del contexto."
+            "1": "Las pruebas se desgastan.",
+            "2": "Las pruebas exhaustivas son imposibles.",
+            "3": "Los defectos se agrupan.",
+            "4": "Las pruebas dependen del contexto."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál es el propósito de las pruebas de regresión?",
         "options": {
-            "A": "Garantizar que el sistema sigue funcionando después de realizar cambios.",
-            "B": "Identificar defectos en el código existente después de la integración de nuevos módulos.",
-            "C": "Verificar que el sistema es compatible con nuevas versiones de software.",
-            "D": "Evaluar la estabilidad del sistema bajo condiciones extremas."
+            "1": "Garantizar que el sistema sigue funcionando después de realizar cambios.",
+            "2": "Identificar defectos en el código existente después de la integración de nuevos módulos.",
+            "3": "Verificar que el sistema es compatible con nuevas versiones de software.",
+            "4": "Evaluar la estabilidad del sistema bajo condiciones extremas."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Cuál es la diferencia clave entre aseguramiento de la calidad y pruebas?",
         "options": {
-            "A": "El aseguramiento de la calidad se enfoca en los procesos; las pruebas se enfocan en el producto.",
-            "B": "El aseguramiento de la calidad corrige defectos; las pruebas los identifican.",
-            "C": "Las pruebas son parte del aseguramiento de la calidad.",
-            "D": "El aseguramiento de la calidad se realiza después de las pruebas."
+            "1": "El aseguramiento de la calidad se enfoca en los procesos; las pruebas se enfocan en el producto.",
+            "2": "El aseguramiento de la calidad corrige defectos; las pruebas los identifican.",
+            "3": "Las pruebas son parte del aseguramiento de la calidad.",
+            "4": "El aseguramiento de la calidad se realiza después de las pruebas."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     },
     {
         "question": "¿Qué tipo de prueba se centra en identificar defectos antes de que sean enviados a producción?",
         "options": {
-            "A": "Pruebas de validación.",
-            "B": "Pruebas de verificación.",
-            "C": "Pruebas de regresión.",
-            "D": "Pruebas de aceptación."
+            "1": "Pruebas de validación.",
+            "2": "Pruebas de verificación.",
+            "3": "Pruebas de regresión.",
+            "4": "Pruebas de aceptación."
         },
-        "correctAnswer": "B"
+        "correctAnswer": "2"
     },
     {
         "question": "¿Qué principio de prueba indica que no se puede probar exhaustivamente todos los casos posibles?",
         "options": {
-            "A": "Las pruebas se desgastan.",
-            "B": "Falacia de la ausencia de errores.",
-            "C": "Las pruebas exhaustivas son imposibles.",
-            "D": "Los defectos se agrupan."
+            "1": "Las pruebas se desgastan.",
+            "2": "Falacia de la ausencia de errores.",
+            "3": "Las pruebas exhaustivas son imposibles.",
+            "4": "Los defectos se agrupan."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "3"
     },
     {
         "question": "¿Qué principio de prueba explica que un sistema puede fallar incluso después de haber sido probado exhaustivamente?",
         "options": {
-            "A": "Las pruebas dependen del contexto.",
-            "B": "Las pruebas muestran la presencia de defectos.",
-            "C": "Falacia de la ausencia de defectos.",
-            "D": "Las pruebas se desgastan."
+            "1": "Las pruebas dependen del contexto.",
+            "2": "Las pruebas muestran la presencia de defectos.",
+            "3": "Falacia de la ausencia de defectos.",
+            "4": "Las pruebas se desgastan."
         },
-        "correctAnswer": "C"
+        "correctAnswer": "3"
     },
     {
         "question": "¿Qué principio de prueba afirma que probar solo puede demostrar la presencia de defectos?",
         "options": {
-            "A": "Las pruebas muestran la presencia de defectos.",
-            "B": "Las pruebas exhaustivas son imposibles.",
-            "C": "Las pruebas tempranas ahorran tiempo y dinero.",
-            "D": "Los defectos se agrupan."
+            "1": "Las pruebas muestran la presencia de defectos.",
+            "2": "Las pruebas exhaustivas son imposibles.",
+            "3": "Las pruebas tempranas ahorran tiempo y dinero.",
+            "4": "Los defectos se agrupan."
         },
-        "correctAnswer": "A"
+        "correctAnswer": "1"
     }
 ]
