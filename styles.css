@@ -50,32 +50,46 @@ button:focus, .option-input:focus {
 
 /* Estilo para el contenedor de preguntas */
 #question-container {
-    display: none;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente la pregunta y las opciones */
+    text-align: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 75%; /* Ancho ajustable */
 }
 
 /* Estilos para el texto de las preguntas */
 #question {
-    font-size: 1.5em; /* Tamaño de la fuente del enunciado */
-    font-weight: bold; /* Negrita para el enunciado */
-    margin-bottom: 20px; /* Separación inferior */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente las opciones */
+    width: 100%;
 }
 
 /* Estilo para las etiquetas de opciones */
+/* Centrado de las opciones de respuesta */
 .option-label {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente las opciones */
     margin-bottom: 10px;
-    padding-left: 40px;
+    padding-left: 0; /* Elimina cualquier padding izquierdo */
     font-size: 16px;
     cursor: pointer;
+    width: 100%;
+    max-width: 500px; /* Limita el ancho de las opciones */
+    text-align: left; /* Asegura que el texto de las opciones esté alineado a la izquierda */
 }
 
 .option-input {
     margin-right: 10px;
-    margin-top: 3px;
+    /* margin-top: 3px; */
 }
 
 .option-text {
@@ -115,7 +129,7 @@ button:focus, .option-input:focus {
     padding-left: 20px; /* Margen izquierdo */
     padding-right: 20px; /* Margen derecho */
     width: 100%;
-    max-width: 600px;
+    max-width: 75%; /* Incrementa el ancho para ocupar más espacio horizontal */
     overflow-x: auto; /* Permitir scroll horizontal */
     max-height: 70vh; /* Limitar la altura y permitir scroll si hay muchas preguntas */
     overflow-y: auto; /* Scroll vertical si es necesario */

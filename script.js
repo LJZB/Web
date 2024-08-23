@@ -5,6 +5,7 @@ let userAnswers = [];
 let timer;
 let timeLeft;
 
+const questionTitle = document.getElementById('question-title');
 const startButton = document.getElementById('start-button');
 const minutesInput = document.getElementById('minutes');
 const secondsInput = document.getElementById('seconds');
@@ -96,6 +97,12 @@ cancelButton.addEventListener('click', () => {
 // Función para mostrar la pregunta actual
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
+    
+    // Actualizar el título de la pregunta
+    questionTitle.textContent = `Pregunta ${currentQuestionIndex + 1}`;
+    questionTitle.style.display = 'block'; // Asegura que el título se muestre
+
+    // Mostrar la pregunta actual (sin el número)
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
     for (let option in currentQuestion.options) {
@@ -109,32 +116,46 @@ function showQuestion() {
     }
 }
 
-// Gestión de la selección de respuestas y avance en las preguntas
+// Manejar la selección de respuestas y almacenar solo la pregunta y la respuesta
 optionsContainer.addEventListener('change', (e) => {
     if (e.target.classList.contains('option-input')) {
         const selectedOption = e.target.value;
         const selectedText = `<b>${selectedOption}.</b> ${questions[currentQuestionIndex].options[selectedOption]}`;
         const correctText = `<b>${questions[currentQuestionIndex].correctAnswer}.</b> ${questions[currentQuestionIndex].options[questions[currentQuestionIndex].correctAnswer]}`;
         
+        // Guardar solo la pregunta y la respuesta, sin el título ni el número
         userAnswers.push({
-            question: questions[currentQuestionIndex].question,
+            question: questions[currentQuestionIndex].question, // Solo la pregunta
             selected: selectedText,
             correct: selectedOption === questions[currentQuestionIndex].correctAnswer,
             correctAnswer: correctText
         });
 
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            showQuestion();
-        } else {
-            clearInterval(timer);
-            showResults();
-        }
+        // Marcar la opción seleccionada
+        e.target.checked = true;
+        
+        // Retraso de 500ms antes de avanzar a la siguiente pregunta
+        setTimeout(() => {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion();
+            } else {
+                clearInterval(timer);
+                showResults();
+            }
+        }, 500);
     }
 });
 
+
+
 // Función para iniciar el temporizador
 function startTimer() {
+    // Muestra el tiempo inicial en el formato correcto
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerElement.textContent = `Tiempo restante: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    
     timer = setInterval(() => {
         timeLeft--;
         const minutes = Math.floor(timeLeft / 60);
@@ -167,35 +188,24 @@ function showResults() {
     let correctCount = 0;
     let incorrectCount = 0;
 
-    questions.forEach((question, index) => {
-        const answer = userAnswers[index];
+    userAnswers.forEach((answer) => {
         const row = document.createElement('tr');
-        
-        if (answer) {
-            row.className = answer.correct ? 'correct' : 'incorrect';
-            if (answer.correct) correctCount++;
-            else incorrectCount++;
-            row.innerHTML = `
-                <td>${answer.question}</td>
-                <td>${answer.selected}</td>
-                <td>${answer.correct ? 'Sí' : 'No'}</td>
-                <td>${!answer.correct ? answer.correctAnswer : ''}</td>
-            `;
-        } else {
-            incorrectCount++;
-            row.className = 'incorrect';
-            row.innerHTML = `
-                <td>${question.question}</td>
-                <td>Sin responder</td>
-                <td></td>
-                <td></td>
-            `;
-        }
+        row.className = answer.correct ? 'correct' : 'incorrect';
+
+        row.innerHTML = `
+            <td>${answer.question}</td> <!-- La pregunta -->
+            <td>${answer.selected}</td> <!-- Respuesta seleccionada -->
+            <td>${answer.correct ? 'Sí' : 'No'}</td> <!-- Correcto o incorrecto -->
+            <td>${!answer.correct ? answer.correctAnswer : ''}</td> <!-- Respuesta correcta -->
+        `;
+
+        if (answer.correct) correctCount++;
+        else incorrectCount++;
 
         resultsBody.appendChild(row);
     });
 
-    const totalQuestions = questions.length;
+    const totalQuestions = userAnswers.length;
     const percentage = (correctCount / totalQuestions) * 100;
     correctCountElement.textContent = correctCount;
     incorrectCountElement.textContent = incorrectCount;
