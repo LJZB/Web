@@ -1,3 +1,4 @@
+// Variables globales y referencias a elementos del DOM
 let questions = [];
 let currentQuestionIndex = 0;
 let userAnswers = [];
@@ -26,6 +27,7 @@ const incorrectCountElement = document.getElementById('incorrect-count');
 const percentageElement = document.getElementById('percentage');
 const statusElement = document.getElementById('status');
 
+// Función para validar la entrada de tiempo
 function validateTimeInput() {
     const minutes = parseInt(minutesInput.value);
     const seconds = parseInt(secondsInput.value);
@@ -45,6 +47,7 @@ function validateTimeInput() {
     return true;
 }
 
+// Función para validar la entrada del número de preguntas
 function validateQuestionInput() {
     const numQuestions = parseInt(numQuestionsInput.value);
 
@@ -57,6 +60,7 @@ function validateQuestionInput() {
     return true;
 }
 
+// Función para cargar las preguntas desde un archivo JSON
 function loadQuestions() {
     fetch('questions_chap01.json')
         .then(response => response.json())
@@ -68,17 +72,7 @@ function loadQuestions() {
         .catch(error => console.error('Error al cargar preguntas:', error));
 }
 
-continueButton.addEventListener('click', () => {
-    iframeAlert.style.display = 'none';
-    document.getElementById('time-setup').style.display = 'none';
-    document.getElementById('question-setup').style.display = 'none';
-    startButton.style.display = 'none';
-    loadQuestions();  // Carga las preguntas y luego muestra la primera
-    questionContainer.style.display = 'block';
-    startTimer();
-});
-
-
+// Configuración de eventos para los botones y el inicio del simulacro
 startButton.addEventListener('click', () => {
     if (validateTimeInput() && validateQuestionInput()) {
         iframeAlert.style.display = 'block';
@@ -92,7 +86,6 @@ continueButton.addEventListener('click', () => {
     startButton.style.display = 'none';
     loadQuestions();
     questionContainer.style.display = 'block';
-    showQuestion();
     startTimer();
 });
 
@@ -100,11 +93,12 @@ cancelButton.addEventListener('click', () => {
     iframeAlert.style.display = 'none';
 });
 
+// Función para mostrar la pregunta actual
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
-     for (let option in currentQuestion.options) {
+    for (let option in currentQuestion.options) {
         const label = document.createElement('label');
         label.classList.add('option-label');
         label.innerHTML = `
@@ -115,6 +109,7 @@ function showQuestion() {
     }
 }
 
+// Gestión de la selección de respuestas y avance en las preguntas
 optionsContainer.addEventListener('change', (e) => {
     if (e.target.classList.contains('option-input')) {
         const selectedOption = e.target.value;
@@ -138,6 +133,7 @@ optionsContainer.addEventListener('change', (e) => {
     }
 });
 
+// Función para iniciar el temporizador
 function startTimer() {
     timer = setInterval(() => {
         timeLeft--;
@@ -152,6 +148,7 @@ function startTimer() {
     }, 1000);
 }
 
+// Función para mostrar un mensaje de timeout
 function showTimeoutMessage() {
     questionContainer.style.display = 'none';
     iframeTimeout.style.display = 'block';
@@ -161,6 +158,7 @@ function showTimeoutMessage() {
     }, 3000);
 }
 
+// Función para mostrar los resultados al finalizar el examen
 function showResults() {
     resultsBody.innerHTML = '';
     questionContainer.style.display = 'none';
@@ -212,6 +210,7 @@ function showResults() {
     }
 }
 
+// Reinicio de la aplicación
 restartButton.addEventListener('click', () => {
     location.reload();
 });
