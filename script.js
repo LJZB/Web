@@ -191,10 +191,12 @@ function showTimeoutMessage() {
 }
 
 // Función para mostrar los resultados al finalizar el examen
+// Función para mostrar los resultados al finalizar el examen
 function showResults() {
     resultsBody.innerHTML = '';
-    questionContainer.style.display = 'none';
-    resultsContainer.style.display = 'block';
+    questionContainer.style.display = 'none'; // Oculta el contenedor de preguntas
+    questionTitle.style.display = 'none'; // Oculta el título de la pregunta
+    resultsContainer.style.display = 'block'; // Muestra el contenedor de resultados
 
     let correctCount = 0;
     let incorrectCount = 0;
@@ -204,10 +206,10 @@ function showResults() {
         row.className = answer.correct ? 'correct' : 'incorrect';
 
         row.innerHTML = `
-            <td>${answer.question}</td> <!-- La pregunta -->
-            <td>${answer.literal}. ${answer.selected}</td> <!-- Respuesta seleccionada con el literal -->
-            <td>${answer.correct ? 'Sí' : 'No'}</td> <!-- Correcto o incorrecto -->
-            <td>${answer.correct ? '' : `${answer.literal}. ${answer.correctAnswer}`}</td> <!-- Respuesta correcta sin duplicar -->
+            <td>${answer.question}</td>
+            <td>${answer.literal}. ${answer.selected}</td>
+            <td>${answer.correct ? 'Sí' : 'No'}</td>
+            <td>${answer.correct ? '' : `${answer.correctAnswer}`}</td>
         `;
 
         if (answer.correct) correctCount++;
@@ -230,6 +232,7 @@ function showResults() {
         statusElement.textContent = 'Reprobado';
     }
 }
+
 
 // Reinicio de la aplicación
 restartButton.addEventListener('click', () => {
