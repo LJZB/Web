@@ -138,14 +138,16 @@ optionsContainer.addEventListener('change', (e) => {
         // Guardar solo la respuesta seleccionada sin el literal duplicado
         const currentQuestion = questions[currentQuestionIndex];
 
+        // Obtener el literal correcto para la respuesta correcta
+        const correctLiteral = [...optionsContainer.querySelectorAll('label')].find(label => label.dataset.key === currentQuestion.correctAnswer).dataset.literal;
+
         userAnswers.push({
             question: currentQuestion.question,
             selected: selectedText.replace(`${selectedLiteral}. `, ""), // Aquí almacenamos el texto sin el literal
             literal: selectedLiteral,
             correct: selectedKey === currentQuestion.correctAnswer,
-            correctAnswer: `${currentQuestion.options[currentQuestion.correctAnswer]}`
+            correctAnswer: `${correctLiteral}. ${currentQuestion.options[currentQuestion.correctAnswer]}` // Guardamos la respuesta correcta con el literal correcto
         });
-        
 
         // Retraso de 500ms antes de avanzar a la siguiente pregunta
         setTimeout(() => {
@@ -191,7 +193,6 @@ function showTimeoutMessage() {
 }
 
 // Función para mostrar los resultados al finalizar el examen
-// Función para mostrar los resultados al finalizar el examen
 function showResults() {
     resultsBody.innerHTML = '';
     questionContainer.style.display = 'none'; // Oculta el contenedor de preguntas
@@ -209,7 +210,7 @@ function showResults() {
             <td>${answer.question}</td>
             <td>${answer.literal}. ${answer.selected}</td>
             <td>${answer.correct ? 'Sí' : 'No'}</td>
-            <td>${answer.correct ? '' : `${answer.correctAnswer}`}</td>
+            <td>${answer.correctAnswer}</td> <!-- Mostrar el literal con la respuesta correcta -->
         `;
 
         if (answer.correct) correctCount++;
