@@ -140,11 +140,12 @@ optionsContainer.addEventListener('change', (e) => {
 
         userAnswers.push({
             question: currentQuestion.question,
-            selected: selectedText, // Solo el texto sin duplicar el literal
-            literal: selectedLiteral, // Guardamos el literal por separado para mostrarlo
-            correct: selectedKey === currentQuestion.correctAnswer, // Comparación correcta usando la clave
-            correctAnswer: `${currentQuestion.options[currentQuestion.correctAnswer]}` // Mostrar la respuesta correcta sin duplicar el literal
+            selected: selectedText.replace(`${selectedLiteral}. `, ""), // Aquí almacenamos el texto sin el literal
+            literal: selectedLiteral,
+            correct: selectedKey === currentQuestion.correctAnswer,
+            correctAnswer: `${currentQuestion.options[currentQuestion.correctAnswer]}`
         });
+        
 
         // Retraso de 500ms antes de avanzar a la siguiente pregunta
         setTimeout(() => {
