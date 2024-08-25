@@ -210,7 +210,7 @@ function showResults() {
             <td>${answer.question}</td>
             <td>${answer.literal}. ${answer.selected}</td>
             <td>${answer.correct ? 'Sí' : 'No'}</td>
-            <td>${answer.correctAnswer}</td> <!-- Mostrar el literal con la respuesta correcta -->
+            <td>${answer.correct ? '' : answer.correctAnswer}</td> <!-- No mostrar nada si es correcto -->
         `;
 
         if (answer.correct) correctCount++;
