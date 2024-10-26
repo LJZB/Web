@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Fondo de la página y estilos generales */
 body {
     display: flex;
     justify-content: center;
@@ -6,59 +6,103 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    background-color: #FAFAFA; /* Fondo blanco */
-    font-family: Arial, sans-serif;
+    background-color: #f4f6f8; /* Gris suave */
+    font-family: 'Roboto', sans-serif;
     color: #4B8673; /* Texto en verde oscuro */
 }
 
-/* Estilos para los botones */
-#start-button, #continue-button, #cancel-button, #restart-button {
+/* Contenedor principal de la pantalla de configuración */
+#main-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* Título y descripción */
+#main-container h1 {
+    font-size: 24px;
+    color: #4B8673;
+    margin: 0 0 10px;
+}
+
+#main-container p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Agrupación de etiquetas e inputs en pantalla de configuración */
+.label-input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #4B8673;
+    margin-right: 10px;
+    width: 50%;
+    text-align: right;
+}
+
+.time-input, #num-questions {
+    font-size: 16px;
+    padding: 8px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+/* Botón principal */
+#start-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #0FA3B1; /* Fondo cian */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+#start-button:hover {
+    background-color: #4B8673; /* Fondo verde oscuro al pasar el cursor */
+}
+
+/* Estilo para botones adicionales */
+#continue-button, #cancel-button, #restart-button {
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: #0FA3B1; /* Fondo cian */
-    color: #FAFAFA; /* Texto blanco */
+    background-color: #0FA3B1;
+    color: #FAFAFA;
     border: none;
 }
 
-#start-button:hover, #continue-button:hover, #cancel-button:hover, #restart-button:hover {
-    background-color: #4B8673; /* Fondo verde oscuro al pasar el cursor */
+#continue-button:hover, #cancel-button:hover, #restart-button:hover {
+    background-color: #4B8673;
 }
 
-/* Transiciones suaves para elementos que aparecen o desaparecen */
-#question-container, #iframe-alert, #iframe-timeout, #results-container {
-    transition: all 0.6s ease-in-out; /* Transición suave */
-}
-
-/* Estilos de enfoque para accesibilidad */
-button:focus, .option-input:focus {
-    outline: 2px solid #0FA3B1; /* Borde cian al enfocar */
-    outline-offset: 2px; /* Espacio entre el borde y el elemento */
-}
-
-/* Ajustes responsivos */
-@media (max-width: 600px) {
-    body {
-        padding: 10px; /* Padding en pantallas pequeñas */
-    }
-
-    #question-container, #results-container {
-        width: 100%; /* Uso completo del ancho disponible */
-    }
-}
-
-/* Estilo para el contenedor de preguntas */
+/* Contenedor de preguntas */
 #question-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente la pregunta y las opciones */
+    align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 75%; /* Ancho ajustable */
+    max-width: 75%;
+    transition: all 0.6s ease-in-out;
 }
 
-/* Estilos para el texto de las preguntas */
 #question {
     font-size: 1.5em;
     font-weight: bold;
@@ -68,28 +112,25 @@ button:focus, .option-input:focus {
 #options-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente las opciones */
+    align-items: center;
     width: 100%;
 }
 
-/* Estilo para las etiquetas de opciones */
-/* Centrado de las opciones de respuesta */
+/* Opciones de respuesta */
 .option-label {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra horizontalmente las opciones */
+    justify-content: center;
     margin-bottom: 10px;
-    padding-left: 0; /* Elimina cualquier padding izquierdo */
     font-size: 16px;
     cursor: pointer;
     width: 100%;
-    max-width: 500px; /* Limita el ancho de las opciones */
-    text-align: left; /* Asegura que el texto de las opciones esté alineado a la izquierda */
+    max-width: 500px;
+    text-align: left;
 }
 
 .option-input {
     margin-right: 10px;
-    /* margin-top: 3px; */
 }
 
 .option-text {
@@ -107,75 +148,73 @@ button:focus, .option-input:focus {
     color: #E6AF2E; /* Texto mostaza */
 }
 
-/* Estilo para las alertas y timeout */
+/* Alertas y timeout */
 #iframe-alert, #iframe-timeout {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FAFAFA; /* Fondo blanco */
-    border: 1px solid #0FA3B1; /* Borde cian */
+    background-color: #FAFAFA;
+    border: 1px solid #0FA3B1;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 100;
 }
 
-/* Estilo para el contenedor de resultados */
+/* Contenedor de resultados */
 #results-container {
     display: none;
     margin-top: 20px;
-    padding-left: 20px; /* Margen izquierdo */
-    padding-right: 20px; /* Margen derecho */
+    padding: 0 20px;
     width: 100%;
-    max-width: 75%; /* Incrementa el ancho para ocupar más espacio horizontal */
-    overflow-x: auto; /* Permitir scroll horizontal */
-    max-height: 70vh; /* Limitar la altura y permitir scroll si hay muchas preguntas */
-    overflow-y: auto; /* Scroll vertical si es necesario */
+    max-width: 75%;
+    overflow-x: auto;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 table {
     margin-top: 20px;
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid #0FA3B1; /* Borde cian */
+    border: 1px solid #0FA3B1;
 }
 
 th, td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #0FA3B1; /* Líneas divisorias cian entre las celdas */
-    color: #4B8673; /* Texto verde oscuro */
+    border: 1px solid #0FA3B1;
+    color: #4B8673;
 }
 
-/* Resaltado de respuestas correctas e incorrectas */
+/* Resaltado de respuestas */
 .correct {
-    background-color: #D6EEF9; /* Azul mucho más claro para respuestas correctas */
-    color: #4B8673; /* Texto verde oscuro */
+    background-color: #D6EEF9;
+    color: #4B8673;
 }
 
 .incorrect {
-    background-color: #FBE4C4; /* Fondo mostaza mucho más claro para respuestas incorrectas */
-    color: #4B8673; /* Texto verde oscuro */
+    background-color: #FBE4C4;
+    color: #4B8673;
 }
 
-/* Estilo para el resumen de resultados */
+/* Resumen de resultados */
 #summary {
     margin-top: 20px;
     text-align: center;
     font-size: 18px;
 }
 
-/* Estilo para el estado (Aprobado/Reprobado) */
 #status {
     font-weight: bold;
     font-size: 20px;
     margin-top: 10px;
-    color: #E6AF2E; /* Texto mostaza */
+    color: #E6AF2E;
 }
 
-/* Estilo para el botón de reinicio */
+/* Botón de reinicio */
 #restart-button {
     margin-top: 20px;
     display: block;
@@ -183,12 +222,10 @@ th, td {
     margin-right: auto;
 }
 
-/* Estilo para los inputs de tiempo */
-.time-input {
-    font-size: 18px;
-    padding: 5px;
-    margin: 5px;
-    width: 60px;
-    text-align: center;
-    border: 1px solid #4B8673; /* Borde verde oscuro */
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+    #main-container, #question-container, #results-container {
+        width: 90%;
+    }
 }
+

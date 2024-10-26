@@ -4,52 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador ISTQB</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Configuración del tiempo del simulacro -->
-    <div id="time-setup">
-        <label for="minutes">Minutos:</label>
-        <input type="number" id="minutes" class="time-input" min="0" max="60" value="5">
-        <label for="seconds">Segundos:</label>
-        <input type="number" id="seconds" class="time-input" min="0" max="60" value="0">
-        <p id="time-error" style="color: red; display: none;">Por favor, ingrese un tiempo válido.</p>
+    <!-- Pantalla de configuración inicial -->
+    <div id="main-container">
+        <h1>Simulador de Examen</h1>
+        <p>Configura tu simulacro</p>
+        
+        <div class="label-input-group">
+            <label for="minutes">Minutos:</label>
+            <input type="number" id="minutes" class="time-input" min="0" max="60" value="5">
+        </div>
+        
+        <div class="label-input-group">
+            <label for="seconds">Segundos:</label>
+            <input type="number" id="seconds" class="time-input" min="0" max="60" value="0">
+        </div>
+        
+        <div class="label-input-group">
+            <label for="num-questions">Número de preguntas:</label>
+            <input type="number" id="num-questions" class="time-input" min="1" max="30" value="3">
+        </div>
+        
+        <button id="start-button">Comenzar Simulacro</button>
     </div>
-
-    <!-- Configuración del número de preguntas -->
-    <div id="question-setup">
-        <label for="num-questions">Número de preguntas:</label>
-        <input type="number" id="num-questions" class="time-input" min="1" max="30" value="3">
-        <p id="question-error" style="color: red; display: none;">Por favor, ingrese un número de preguntas válido.</p>
-    </div>
-
-    <!-- Botón para iniciar el simulacro -->
-    <button id="start-button">Comenzar Simulacro</button>
-
+    
     <!-- Alerta previa al inicio del simulacro -->
-    <div id="iframe-alert">
+    <div id="iframe-alert" style="display: none;">
         <p>A continuación comenzará el simulacro del examen, si das clic en 'Continuar' comenzará a contar el tiempo.</p>
         <button id="continue-button">Continuar</button>
         <button id="cancel-button">Cancelar</button>
     </div>
 
     <!-- Mensaje de timeout -->
-    <div id="iframe-timeout">
+    <div id="iframe-timeout" style="display: none;">
         <p>Se agotó el tiempo</p>
     </div>
 
-    <!-- Agregar el título de la pregunta aquí -->
+    <!-- Título de la pregunta -->
     <h2 id="question-title" style="display: none; text-align: center;"></h2>
 
     <!-- Contenedor de preguntas -->
-    <div id="question-container">
+    <div id="question-container" style="display: none;">
         <p id="question"></p>
         <div id="options-container"></div>
         <p id="timer"></p>
     </div>
 
     <!-- Contenedor de resultados -->
-    <div id="results-container">
+    <div id="results-container" style="display: none;">
         <h2>Resultados</h2>
         <table>
             <thead>
@@ -72,6 +76,6 @@
         <button id="restart-button">Comenzar de nuevo</button>
     </div>
 
-    <script src="script.js"></script> <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
 </body>
 </html>

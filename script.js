@@ -10,8 +10,6 @@ const startButton = document.getElementById('start-button');
 const minutesInput = document.getElementById('minutes');
 const secondsInput = document.getElementById('seconds');
 const numQuestionsInput = document.getElementById('num-questions');
-const timeError = document.getElementById('time-error');
-const questionError = document.getElementById('question-error');
 const iframeAlert = document.getElementById('iframe-alert');
 const iframeTimeout = document.getElementById('iframe-timeout');
 const continueButton = document.getElementById('continue-button');
@@ -39,11 +37,10 @@ function validateTimeInput() {
         (minutes === 0 && (seconds < 5 || seconds > 60)) ||
         (minutes >= 1 && (seconds < 0 || seconds > 60))
     ) {
-        timeError.style.display = 'block';
+        alert("Por favor, ingrese un tiempo válido."); // Muestra un mensaje de alerta si el tiempo es inválido
         return false;
     }
 
-    timeError.style.display = 'none';
     timeLeft = minutes * 60 + seconds;
     return true;
 }
@@ -53,11 +50,10 @@ function validateQuestionInput() {
     const numQuestions = parseInt(numQuestionsInput.value);
 
     if (isNaN(numQuestions) || numQuestions < 1 || numQuestions > 30) {
-        questionError.style.display = 'block';
+        alert("Por favor, ingrese un número de preguntas válido."); // Muestra un mensaje de alerta si el número de preguntas es inválido
         return false;
     }
 
-    questionError.style.display = 'none';
     return true;
 }
 
@@ -76,15 +72,13 @@ function loadQuestions() {
 // Configuración de eventos para los botones y el inicio del simulacro
 startButton.addEventListener('click', () => {
     if (validateTimeInput() && validateQuestionInput()) {
-        iframeAlert.style.display = 'block';
+        iframeAlert.style.display = 'block';  // Muestra la alerta previa al simulacro
     }
 });
 
 continueButton.addEventListener('click', () => {
     iframeAlert.style.display = 'none';
-    document.getElementById('time-setup').style.display = 'none';
-    document.getElementById('question-setup').style.display = 'none';
-    startButton.style.display = 'none';
+    document.getElementById('main-container').style.display = 'none';
     loadQuestions();
     questionContainer.style.display = 'block';
     startTimer();
@@ -100,19 +94,13 @@ function showQuestion() {
     
     // Actualizar el título de la pregunta
     questionTitle.textContent = `Pregunta ${currentQuestionIndex + 1}`;
-    questionTitle.style.display = 'block'; // Asegura que el título se muestre
+    questionTitle.style.display = 'block';
 
-    // Definir los literales A, B, C, D
     const literals = ['A', 'B', 'C', 'D'];
-
-    // Obtener las opciones y mezclarlas aleatoriamente
     const shuffledOptions = Object.entries(currentQuestion.options).sort(() => Math.random() - 0.5);
-
-    // Mostrar la pregunta actual
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
 
-    // Recorrer las opciones mezcladas y crear los elementos HTML con literales asignados
     shuffledOptions.forEach(([key, value], index) => {
         const literal = literals[index];
         const label = document.createElement('label');
@@ -121,54 +109,52 @@ function showQuestion() {
             <input type="radio" name="option" class="option-input" value="${literal}">
             <span class="option-text"><b>${literal}.</b> ${value}</span>
         `;
-        label.dataset.key = key; // Guardamos la clave correcta para la comparación
-        label.dataset.literal = literal; // Guardamos el literal en el dataset del label
+        label.dataset.key = key;
+        label.dataset.literal = literal;
+        label.addEventListener('click', () => handleAnswerSelection(literal, value, key));
         optionsContainer.appendChild(label);
     });
 }
 
-// Manejar la selección de respuestas y almacenar solo la pregunta y la respuesta
-optionsContainer.addEventListener('change', (e) => {
-    if (e.target.classList.contains('option-input')) {
-        const selectedLabel = e.target.closest('label');
-        const selectedLiteral = selectedLabel.dataset.literal; // Obtenemos el literal del dataset
-        const selectedKey = selectedLabel.dataset.key; // Obtenemos la clave correcta del dataset
-        const selectedText = selectedLabel.querySelector('.option-text').textContent.trim(); // Texto de la opción seleccionada
+// Función para manejar la selección de respuesta y pasar a la siguiente pregunta
+function handleAnswerSelection(literal, selectedOption, key) {
+    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
 
-        // Guardar solo la respuesta seleccionada sin el literal duplicado
-        const currentQuestion = questions[currentQuestionIndex];
+    // Almacenar la respuesta del usuario
+    userAnswers.push({
+        question: questions[currentQuestionIndex].question,
+        selected: selectedOption,
+        literal: literal,
+        correct: key === correctAnswer,
+        correctAnswer: questions[currentQuestionIndex].options[correctAnswer]
+    });
 
-        // Obtener el literal correcto para la respuesta correcta
-        const correctLiteral = [...optionsContainer.querySelectorAll('label')].find(label => label.dataset.key === currentQuestion.correctAnswer).dataset.literal;
+    // Asegurarnos de que el checkbox seleccionado permanezca marcado
+    const options = document.getElementsByName('option');
+    options.forEach(option => {
+        if (option.value === literal) {
+            option.checked = true; // Marcar el checkbox seleccionado
+        }
+        option.disabled = true; // Deshabilitar todas las opciones
+    });
 
-        userAnswers.push({
-            question: currentQuestion.question,
-            selected: selectedText.replace(`${selectedLiteral}. `, ""), // Aquí almacenamos el texto sin el literal
-            literal: selectedLiteral,
-            correct: selectedKey === currentQuestion.correctAnswer,
-            correctAnswer: `${correctLiteral}. ${currentQuestion.options[currentQuestion.correctAnswer]}` // Guardamos la respuesta correcta con el literal correcto
-        });
+    // Esperar 500 ms antes de avanzar a la siguiente pregunta
+    setTimeout(() => {
+        // Avanzar a la siguiente pregunta o mostrar resultados si es la última
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            showQuestion();
+        } else {
+            clearInterval(timer); // Detener el temporizador
+            showResults(); // Mostrar los resultados al final
+        }
+    }, 500); // Espera de 500 ms
+}
 
-        // Retraso de 500ms antes de avanzar a la siguiente pregunta
-        setTimeout(() => {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < questions.length) {
-                showQuestion();
-            } else {
-                clearInterval(timer);
-                showResults();
-            }
-        }, 500);
-    }
-});
 
-// Función para iniciar el temporizador
+
+// Inicia el temporizador
 function startTimer() {
-    // Muestra el tiempo inicial en el formato correcto
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    timerElement.textContent = `Tiempo restante: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    
     timer = setInterval(() => {
         timeLeft--;
         const minutes = Math.floor(timeLeft / 60);
@@ -182,7 +168,7 @@ function startTimer() {
     }, 1000);
 }
 
-// Función para mostrar un mensaje de timeout
+// Muestra mensaje de timeout
 function showTimeoutMessage() {
     questionContainer.style.display = 'none';
     iframeTimeout.style.display = 'block';
@@ -192,12 +178,12 @@ function showTimeoutMessage() {
     }, 3000);
 }
 
-// Función para mostrar los resultados al finalizar el examen
+// Muestra los resultados
 function showResults() {
     resultsBody.innerHTML = '';
-    questionContainer.style.display = 'none'; // Oculta el contenedor de preguntas
-    questionTitle.style.display = 'none'; // Oculta el título de la pregunta
-    resultsContainer.style.display = 'block'; // Muestra el contenedor de resultados
+    questionContainer.style.display = 'none';
+    questionTitle.style.display = 'none';
+    resultsContainer.style.display = 'block';
 
     let correctCount = 0;
     let incorrectCount = 0;
@@ -210,7 +196,7 @@ function showResults() {
             <td>${answer.question}</td>
             <td>${answer.literal}. ${answer.selected}</td>
             <td>${answer.correct ? 'Sí' : 'No'}</td>
-            <td>${answer.correct ? '' : answer.correctAnswer}</td> <!-- No mostrar nada si es correcto -->
+            <td>${answer.correct ? '' : answer.correctAnswer}</td>
         `;
 
         if (answer.correct) correctCount++;
@@ -235,7 +221,4 @@ function showResults() {
 }
 
 
-// Reinicio de la aplicación
-restartButton.addEventListener('click', () => {
-    location.reload();
-});
+restartButton.addEventListener('click', () => location.reload());
