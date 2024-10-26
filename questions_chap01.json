@@ -298,5 +298,75 @@
             "4": "Los defectos se agrupan."
         },
         "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es uno de los objetivos principales de las pruebas de software?",
+        "options": {
+            "1": "Evaluar productos de trabajo como requisitos, historias de usuario, diseños y código.",
+            "2": "Aumentar la complejidad del software.",
+            "3": "Reducir el nivel de satisfacción del usuario.",
+            "4": "Evitar la colaboración entre equipos."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué objetivo de las pruebas está relacionado con encontrar defectos?",
+        "options": {
+            "1": "Garantizar la cobertura requerida de un objeto de prueba.",
+            "2": "Desencadenar fallas y encontrar defectos.",
+            "3": "Reducir el riesgo de pruebas no ejecutadas.",
+            "4": "Proporcionar entrenamiento al equipo de desarrollo."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un objetivo de las pruebas para reducir riesgos?",
+        "options": {
+            "1": "Reducir el nivel de riesgo de una calidad de software inadecuada.",
+            "2": "Eliminar la necesidad de pruebas adicionales.",
+            "3": "Incrementar el tiempo de desarrollo.",
+            "4": "Probar únicamente la interfaz de usuario."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Por qué es importante verificar que se hayan cumplido los requisitos especificados durante las pruebas?",
+        "options": {
+            "1": "Para garantizar que el sistema cumple con las expectativas contractuales.",
+            "2": "Para reducir el costo del proyecto.",
+            "3": "Para reducir la cantidad de pruebas necesarias.",
+            "4": "Para mejorar la experiencia del usuario final."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de estos objetivos de las pruebas se relaciona con la generación de confianza en la calidad?",
+        "options": {
+            "1": "Proporcionar información a las partes interesadas.",
+            "2": "Generar confianza en la calidad del objeto de prueba.",
+            "3": "Minimizar el tiempo de desarrollo.",
+            "4": "Eliminar la necesidad de pruebas."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué objetivo de la prueba se enfoca en proporcionar información a las partes interesadas para decisiones informadas?",
+        "options": {
+            "1": "Verificar la cobertura de pruebas.",
+            "2": "Proporcionar información a las partes interesadas para decisiones informadas.",
+            "3": "Reducir la cantidad de pruebas necesarias.",
+            "4": "Incrementar el nivel de calidad de forma indefinida."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Cuál de los siguientes describe mejor la validación del objeto de prueba?",
+        "options": {
+            "1": "Validar si el objeto de prueba está completo y funciona según lo esperado por las partes interesadas.",
+            "2": "Reducir el tiempo de desarrollo.",
+            "3": "Eliminar la necesidad de pruebas en producción.",
+            "4": "Incrementar la complejidad del software."
+        },
+        "correctAnswer": "1"
     }
 ]
