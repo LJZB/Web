@@ -1,0 +1,102 @@
+[
+    {
+        "question": "¿Cuál es el valor principal de realizar pruebas estáticas?",
+        "options": {
+            "1": "Identificar errores solo al ejecutar el software.",
+            "2": "Detectar defectos en etapas tempranas sin ejecutar el software.",
+            "3": "Asegurar la ejecución de casos de prueba.",
+            "4": "Eliminar todos los defectos."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué tipo de productos pueden ser evaluados mediante pruebas estáticas?",
+        "options": {
+            "1": "Código, especificaciones y diseños.",
+            "2": "Solo el código fuente.",
+            "3": "Solo especificaciones de requisitos.",
+            "4": "Solo productos finalizados."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de las siguientes opciones describe mejor las pruebas estáticas?",
+        "options": {
+            "1": "Son pruebas realizadas en software en ejecución.",
+            "2": "Son revisiones realizadas sin necesidad de ejecutar el software.",
+            "3": "Incluyen pruebas unitarias y de integración.",
+            "4": "Son equivalentes a las pruebas dinámicas."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Cuál es un beneficio clave de realizar revisiones tempranas?",
+        "options": {
+            "1": "Acelerar el tiempo de desarrollo.",
+            "2": "Permitir cambios después de la implementación.",
+            "3": "Detectar defectos antes de que se vuelvan costosos.",
+            "4": "Eliminar la necesidad de pruebas dinámicas."
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Qué responsabilidad tiene el moderador en una revisión formal?",
+        "options": {
+            "1": "Escribir los casos de prueba.",
+            "2": "Asegurar que el proceso de revisión se siga correctamente.",
+            "3": "Probar el código después de la revisión.",
+            "4": "Ser el autor del documento revisado."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Cuál de las siguientes NO es una actividad en el proceso de revisión?",
+        "options": {
+            "1": "Planificación.",
+            "2": "Preparación.",
+            "3": "Implementación.",
+            "4": "Cierre."
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Cuál es el objetivo de la fase de planificación en el proceso de revisión?",
+        "options": {
+            "1": "Definir los criterios de salida.",
+            "2": "Ejecutar los casos de prueba.",
+            "3": "Seleccionar al autor del documento.",
+            "4": "Realizar el análisis de defectos."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de revisión es adecuada para encontrar errores en documentos de alta criticidad?",
+        "options": {
+            "1": "Revisión informal.",
+            "2": "Revisión técnica.",
+            "3": "Inspección.",
+            "4": "Revisión ad hoc."
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un factor clave para el éxito de una revisión?",
+        "options": {
+            "1": "Realizar revisiones extensas y en sesiones largas.",
+            "2": "Proporcionar objetivos claros y criterios de salida.",
+            "3": "Evitar la participación de los desarrolladores.",
+            "4": "No comunicar los resultados a las partes interesadas."
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué técnica se utiliza en las pruebas estáticas para mejorar la calidad del software?",
+        "options": {
+            "1": "Análisis estático.",
+            "2": "Pruebas exploratorias.",
+            "3": "Pruebas unitarias.",
+            "4": "Pruebas de sistema."
+        },
+        "correctAnswer": "1"
+    }
+]

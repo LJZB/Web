@@ -1,0 +1,242 @@
+[
+    {
+        "question": "¿Cuál es el objetivo principal de la planificación de pruebas?",
+        "options": {
+            "1": "Definir los recursos y esfuerzos necesarios para las pruebas.",
+            "2": "Desarrollar el código de la aplicación.",
+            "3": "Identificar todos los errores posibles en el software.",
+            "4": "Asegurar la cobertura total de código."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un entregable de la fase de planificación de pruebas?",
+        "options": {
+            "1": "El plan de pruebas",
+            "2": "El código de la aplicación",
+            "3": "El entorno de producción",
+            "4": "El informe final de producción"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué actividad se realiza en la fase de monitoreo de pruebas?",
+        "options": {
+            "1": "Seguimiento del progreso en función del plan de pruebas.",
+            "2": "Desarrollo de los casos de prueba.",
+            "3": "Aprobación de la versión del software.",
+            "4": "Análisis de valores límite."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el propósito del control de pruebas?",
+        "options": {
+            "1": "Tomar acciones correctivas cuando el progreso se desvía del plan.",
+            "2": "Desarrollar la estrategia de pruebas.",
+            "3": "Ejecutar todas las pruebas manualmente.",
+            "4": "Desarrollar todos los casos de prueba."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué documento define el alcance, enfoque y recursos de las actividades de prueba?",
+        "options": {
+            "1": "Plan de pruebas",
+            "2": "Caso de prueba",
+            "3": "Informe de defectos",
+            "4": "Manual del usuario"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de las siguientes es una actividad de gestión de defectos?",
+        "options": {
+            "1": "Registrar y hacer seguimiento de defectos.",
+            "2": "Desarrollar el código.",
+            "3": "Planificar la fase de despliegue.",
+            "4": "Eliminar la necesidad de pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué es un criterio de salida en el contexto de las pruebas?",
+        "options": {
+            "1": "Condiciones para finalizar una fase de pruebas.",
+            "2": "Un documento que describe la estrategia de prueba.",
+            "3": "El entorno donde se ejecutan las pruebas.",
+            "4": "El presupuesto estimado de pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el propósito de los indicadores de calidad en la gestión de pruebas?",
+        "options": {
+            "1": "Medir y evaluar el progreso y la calidad de las pruebas.",
+            "2": "Desarrollar casos de prueba.",
+            "3": "Configurar el entorno de pruebas.",
+            "4": "Ejecutar pruebas automatizadas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué actividad es fundamental para la gestión de riesgos en pruebas?",
+        "options": {
+            "1": "Identificación y análisis de riesgos.",
+            "2": "Desarrollo de casos de prueba.",
+            "3": "Ejecución de pruebas de rendimiento.",
+            "4": "Eliminación de errores en el código."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué información se incluye generalmente en un informe de estado de pruebas?",
+        "options": {
+            "1": "Progreso, resultados y problemas de las pruebas.",
+            "2": "El código fuente de la aplicación.",
+            "3": "Los casos de uso de la aplicación.",
+            "4": "El diagrama de arquitectura de la aplicación."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué actividad incluye la creación de un plan de mitigación de riesgos?",
+        "options": {
+            "1": "Gestión de riesgos en pruebas",
+            "2": "Ejecución de pruebas funcionales",
+            "3": "Control de calidad de desarrollo",
+            "4": "Automatización de pruebas"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un indicador de calidad utilizado para el monitoreo de pruebas?",
+        "options": {
+            "1": "Porcentaje de pruebas completadas",
+            "2": "Número total de líneas de código",
+            "3": "Tamaño de la aplicación",
+            "4": "Tiempo de compilación del código"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué rol tiene el líder de pruebas en la gestión de defectos?",
+        "options": {
+            "1": "Coordinar la identificación, registro y resolución de defectos.",
+            "2": "Escribir el código fuente.",
+            "3": "Ejecutar pruebas de usuario.",
+            "4": "Aprobar los informes de ventas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué se entiende por cobertura de pruebas?",
+        "options": {
+            "1": "Porcentaje de requisitos cubiertos por las pruebas.",
+            "2": "Número total de líneas de código.",
+            "3": "Porcentaje de usuarios finales.",
+            "4": "Tiempo necesario para ejecutar las pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué significa la 'priorización de pruebas' en la gestión de pruebas?",
+        "options": {
+            "1": "Determinar qué pruebas ejecutar primero según el riesgo y la importancia.",
+            "2": "Elaborar el plan de pruebas.",
+            "3": "Elaborar los documentos de usuario.",
+            "4": "Determinar el tamaño del equipo de pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es un factor importante al decidir cuándo finalizar las pruebas?",
+        "options": {
+            "1": "Cumplimiento de los criterios de salida definidos.",
+            "2": "Finalización del desarrollo del código.",
+            "3": "Revisión del manual del usuario.",
+            "4": "Reducción del presupuesto del proyecto."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué actividad incluye el seguimiento de la resolución de defectos?",
+        "options": {
+            "1": "Gestión de defectos",
+            "2": "Ejecución de pruebas de sistema",
+            "3": "Automatización de pruebas",
+            "4": "Configuración del entorno de pruebas"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta es útil para monitorear el progreso de las pruebas?",
+        "options": {
+            "1": "Herramientas de gestión de pruebas",
+            "2": "Editor de texto",
+            "3": "Compilador de código",
+            "4": "Motor de base de datos"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué documento especifica el enfoque general de las pruebas?",
+        "options": {
+            "1": "Estrategia de pruebas",
+            "2": "Informe de usuario",
+            "3": "Diagrama de arquitectura",
+            "4": "Plan de despliegue"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué significa la trazabilidad en el contexto de las pruebas?",
+        "options": {
+            "1": "La capacidad de relacionar los requisitos con los casos de prueba.",
+            "2": "El número de usuarios finales.",
+            "3": "La duración de la fase de pruebas.",
+            "4": "La cantidad de defectos encontrados."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué es el análisis de defectos?",
+        "options": {
+            "1": "Evaluación de la causa raíz de los defectos.",
+            "2": "Revisión del diseño del sistema.",
+            "3": "Desarrollo de código nuevo.",
+            "4": "Planificación del entorno de pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué se entiende por 'desviación del plan' en la gestión de pruebas?",
+        "options": {
+            "1": "Diferencia entre el progreso actual y el plan de pruebas.",
+            "2": "Actualización del manual del usuario.",
+            "3": "Reducción del presupuesto.",
+            "4": "Elaboración de nuevos casos de prueba."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica se utiliza para identificar riesgos en las actividades de prueba?",
+        "options": {
+            "1": "Análisis de riesgos",
+            "2": "Pruebas de integración",
+            "3": "Pruebas de regresión",
+            "4": "Pruebas exploratorias"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué actividad es parte del ciclo de vida de gestión de defectos?",
+        "options": {
+            "1": "Registro y clasificación de defectos.",
+            "2": "Revisión del manual del usuario.",
+            "3": "Documentación del código fuente.",
+            "4": "Aprobación de ventas."
+        },
+        "correctAnswer": "1"
+    }
+]

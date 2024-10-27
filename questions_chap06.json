@@ -1,0 +1,202 @@
+[
+    {
+        "question": "¿Cuál de los siguientes es un beneficio de usar herramientas de prueba?",
+        "options": {
+            "1": "Reducción del esfuerzo manual y aumento de la precisión.",
+            "2": "Eliminación de la necesidad de documentación.",
+            "3": "Eliminación total de errores en el software.",
+            "4": "Reducción del tiempo de desarrollo del software."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de herramienta es útil para gestionar el progreso y estado de las pruebas?",
+        "options": {
+            "1": "Herramientas de gestión de pruebas",
+            "2": "Herramientas de ejecución de pruebas",
+            "3": "Herramientas de monitoreo de rendimiento",
+            "4": "Herramientas de depuración"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta facilita la captura y análisis de requisitos para las pruebas?",
+        "options": {
+            "1": "Herramientas de gestión de requisitos",
+            "2": "Herramientas de ejecución de pruebas",
+            "3": "Herramientas de registro de defectos",
+            "4": "Herramientas de análisis de código estático"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de las siguientes herramientas se utiliza para identificar problemas de rendimiento en una aplicación?",
+        "options": {
+            "1": "Herramientas de pruebas de rendimiento",
+            "2": "Herramientas de gestión de pruebas",
+            "3": "Herramientas de gestión de requisitos",
+            "4": "Herramientas de pruebas de regresión"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta ayuda a encontrar defectos mediante el análisis del código fuente sin ejecutarlo?",
+        "options": {
+            "1": "Herramientas de análisis estático",
+            "2": "Herramientas de pruebas de rendimiento",
+            "3": "Herramientas de registro de defectos",
+            "4": "Herramientas de pruebas exploratorias"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de herramienta automatiza la ejecución de pruebas?",
+        "options": {
+            "1": "Herramientas de ejecución de pruebas",
+            "2": "Herramientas de gestión de requisitos",
+            "3": "Herramientas de pruebas de carga",
+            "4": "Herramientas de depuración"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un riesgo de usar herramientas de prueba?",
+        "options": {
+            "1": "Dependencia excesiva en la herramienta.",
+            "2": "Reducción de errores en el software.",
+            "3": "Mejora en la productividad del equipo.",
+            "4": "Facilitación de la trazabilidad de requisitos."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta es útil para capturar y gestionar incidentes en el proceso de pruebas?",
+        "options": {
+            "1": "Herramientas de registro de defectos",
+            "2": "Herramientas de pruebas de carga",
+            "3": "Herramientas de diseño de casos de prueba",
+            "4": "Herramientas de análisis de causa raíz"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de herramienta ayuda a simular la carga en el sistema y medir su rendimiento?",
+        "options": {
+            "1": "Herramientas de pruebas de carga",
+            "2": "Herramientas de análisis estático",
+            "3": "Herramientas de gestión de pruebas",
+            "4": "Herramientas de pruebas de regresión"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el objetivo principal de una herramienta de análisis estático?",
+        "options": {
+            "1": "Detectar defectos sin ejecutar el código",
+            "2": "Ejecutar todas las pruebas automáticamente",
+            "3": "Diseñar casos de prueba",
+            "4": "Monitorear el rendimiento de la aplicación"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es un beneficio de automatizar las pruebas de regresión?",
+        "options": {
+            "1": "Reducción del esfuerzo manual en pruebas repetitivas.",
+            "2": "Aumento del tiempo requerido para las pruebas.",
+            "3": "Eliminación de la necesidad de pruebas exploratorias.",
+            "4": "Reducción de la cobertura de pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta se utiliza para depurar y encontrar errores en el código mientras se ejecuta?",
+        "options": {
+            "1": "Herramientas de depuración",
+            "2": "Herramientas de gestión de pruebas",
+            "3": "Herramientas de análisis estático",
+            "4": "Herramientas de monitoreo de rendimiento"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es un riesgo de automatizar excesivamente las pruebas?",
+        "options": {
+            "1": "Dependencia de las pruebas automáticas y menos pruebas manuales.",
+            "2": "Reducción de la precisión en los resultados de las pruebas.",
+            "3": "Aumento de la cobertura de pruebas.",
+            "4": "Facilitación de la trazabilidad de requisitos."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta puede ayudar a evaluar el uso de la memoria y la velocidad de ejecución de una aplicación?",
+        "options": {
+            "1": "Herramientas de pruebas de rendimiento",
+            "2": "Herramientas de análisis estático",
+            "3": "Herramientas de gestión de requisitos",
+            "4": "Herramientas de depuración"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta es útil para mantener la trazabilidad entre requisitos y casos de prueba?",
+        "options": {
+            "1": "Herramientas de gestión de pruebas",
+            "2": "Herramientas de pruebas exploratorias",
+            "3": "Herramientas de depuración",
+            "4": "Herramientas de monitoreo de rendimiento"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta permite identificar patrones y tendencias en los defectos encontrados?",
+        "options": {
+            "1": "Herramientas de análisis de causa raíz",
+            "2": "Herramientas de pruebas de carga",
+            "3": "Herramientas de diseño de casos de prueba",
+            "4": "Herramientas de depuración"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es una limitación de las herramientas de pruebas automatizadas?",
+        "options": {
+            "1": "No pueden realizar pruebas exploratorias.",
+            "2": "Eliminan la necesidad de pruebas de regresión.",
+            "3": "Aumentan el esfuerzo manual requerido.",
+            "4": "Disminuyen la cobertura de pruebas."
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta ayuda a identificar defectos en una aplicación en producción?",
+        "options": {
+            "1": "Herramientas de monitoreo de rendimiento",
+            "2": "Herramientas de diseño de casos de prueba",
+            "3": "Herramientas de análisis estático",
+            "4": "Herramientas de registro de defectos"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta permite ejecutar pruebas en varios dispositivos de forma automatizada?",
+        "options": {
+            "1": "Herramientas de ejecución de pruebas",
+            "2": "Herramientas de análisis estático",
+            "3": "Herramientas de gestión de requisitos",
+            "4": "Herramientas de monitoreo de rendimiento"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué herramienta es adecuada para asegurar la calidad del código antes de la ejecución?",
+        "options": {
+            "1": "Herramientas de análisis estático",
+            "2": "Herramientas de pruebas de carga",
+            "3": "Herramientas de gestión de pruebas",
+            "4": "Herramientas de depuración"
+        },
+        "correctAnswer": "1"
+    }
+]

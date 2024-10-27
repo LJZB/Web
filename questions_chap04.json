@@ -1,0 +1,202 @@
+[
+    {
+        "question": "¿Qué técnica de diseño de pruebas se basa en la especificación del sistema o componente?",
+        "options": {
+            "1": "Pruebas de caja negra",
+            "2": "Pruebas de caja blanca",
+            "3": "Pruebas exploratorias",
+            "4": "Pruebas de regresión"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de las siguientes es una técnica de prueba de caja negra?",
+        "options": {
+            "1": "Cobertura de código",
+            "2": "Partición de equivalencia",
+            "3": "Cobertura de condiciones",
+            "4": "Cobertura de decisión"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué técnica de prueba de caja blanca se enfoca en cubrir todas las condiciones posibles de una decisión?",
+        "options": {
+            "1": "Cobertura de código",
+            "2": "Cobertura de condiciones múltiples",
+            "3": "Pruebas basadas en el riesgo",
+            "4": "Partición de equivalencia"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué técnica divide los datos de entrada en grupos de valores esperados para producir el mismo resultado?",
+        "options": {
+            "1": "Análisis de valores límite",
+            "2": "Partición de equivalencia",
+            "3": "Cobertura de condición",
+            "4": "Pruebas de integración"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Cuál es el objetivo principal del análisis de valores límite?",
+        "options": {
+            "1": "Probar los valores dentro de un rango de datos",
+            "2": "Identificar los límites de los datos de entrada",
+            "3": "Cubrir todas las combinaciones posibles de condiciones",
+            "4": "Eliminar valores fuera del rango"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué técnica de prueba basada en la experiencia se utiliza cuando el probador utiliza su conocimiento y experiencia previa?",
+        "options": {
+            "1": "Pruebas exploratorias",
+            "2": "Análisis de causa raíz",
+            "3": "Cobertura de condiciones múltiples",
+            "4": "Análisis de valores límite"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de las siguientes es una técnica de diseño de prueba que cubre todas las combinaciones posibles de condiciones?",
+        "options": {
+            "1": "Pruebas de caja negra",
+            "2": "Cobertura de decisión",
+            "3": "Cobertura de condición múltiple",
+            "4": "Pruebas de regresión"
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Qué técnica es útil para probar valores en los límites de un rango?",
+        "options": {
+            "1": "Partición de equivalencia",
+            "2": "Análisis de valores límite",
+            "3": "Pruebas de regresión",
+            "4": "Pruebas de integración"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué técnica de prueba se centra en identificar y probar los grupos de datos que deben tratarse de manera similar?",
+        "options": {
+            "1": "Partición de equivalencia",
+            "2": "Cobertura de decisión",
+            "3": "Pruebas de integración",
+            "4": "Pruebas de regresión"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica utiliza diagramas de estado para definir las pruebas?",
+        "options": {
+            "1": "Pruebas de transición de estados",
+            "2": "Análisis de valores límite",
+            "3": "Cobertura de condición",
+            "4": "Partición de equivalencia"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el propósito de la cobertura de declaración en las pruebas de caja blanca?",
+        "options": {
+            "1": "Cubrir todas las rutas posibles en el código",
+            "2": "Ejecutar cada línea de código al menos una vez",
+            "3": "Ejecutar todos los valores límite",
+            "4": "Ejecutar todas las combinaciones de condiciones"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué técnica de prueba de caja negra es adecuada para sistemas que tienen reglas de negocio complejas?",
+        "options": {
+            "1": "Análisis de decisión de tablas",
+            "2": "Pruebas exploratorias",
+            "3": "Cobertura de declaración",
+            "4": "Pruebas de regresión"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica de prueba utiliza tablas de decisión para representar condiciones y acciones?",
+        "options": {
+            "1": "Pruebas de transición de estados",
+            "2": "Análisis de tablas de decisión",
+            "3": "Partición de equivalencia",
+            "4": "Análisis de valores límite"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Cuál es el propósito de la cobertura de condiciones en las pruebas de caja blanca?",
+        "options": {
+            "1": "Asegurar que cada condición en una decisión sea evaluada en ambos valores (verdadero y falso)",
+            "2": "Ejecutar cada línea de código al menos una vez",
+            "3": "Ejecutar todas las combinaciones de condiciones",
+            "4": "Dividir los datos en particiones de equivalencia"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica de diseño de pruebas se enfoca en identificar y probar flujos de estados y transiciones?",
+        "options": {
+            "1": "Pruebas de transición de estados",
+            "2": "Pruebas de caja blanca",
+            "3": "Partición de equivalencia",
+            "4": "Cobertura de decisión"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica basada en la experiencia se enfoca en probar en función de los riesgos identificados?",
+        "options": {
+            "1": "Pruebas exploratorias",
+            "2": "Pruebas de regresión",
+            "3": "Pruebas basadas en riesgos",
+            "4": "Cobertura de condición múltiple"
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Cuál es un ejemplo de una técnica de caja blanca?",
+        "options": {
+            "1": "Cobertura de declaración",
+            "2": "Partición de equivalencia",
+            "3": "Análisis de valores límite",
+            "4": "Pruebas de transición de estados"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica de diseño de pruebas se utiliza principalmente en software que requiere alta seguridad o alta confiabilidad?",
+        "options": {
+            "1": "Pruebas basadas en riesgos",
+            "2": "Pruebas exploratorias",
+            "3": "Cobertura de condición múltiple",
+            "4": "Pruebas de caja negra"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica permite al probador explorar activamente el sistema sin un conjunto predeterminado de casos de prueba?",
+        "options": {
+            "1": "Pruebas exploratorias",
+            "2": "Cobertura de decisión",
+            "3": "Partición de equivalencia",
+            "4": "Cobertura de declaración"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué técnica de prueba de caja negra evalúa cómo responde el sistema a diferentes combinaciones de entradas?",
+        "options": {
+            "1": "Análisis de tablas de decisión",
+            "2": "Análisis de valores límite",
+            "3": "Cobertura de condición",
+            "4": "Pruebas de integración"
+        },
+        "correctAnswer": "1"
+    }
+]
