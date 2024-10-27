@@ -29,21 +29,16 @@ const statusElement = document.getElementById('status');
 // Función para validar la entrada de tiempo
 function validateTimeInput() {
     const minutes = parseInt(minutesInput.value);
-    const seconds = parseInt(secondsInput.value);
 
-    if (
-        isNaN(minutes) || isNaN(seconds) ||
-        minutes < 0 || minutes > 60 ||
-        (minutes === 0 && (seconds < 5 || seconds > 60)) ||
-        (minutes >= 1 && (seconds < 0 || seconds > 60))
-    ) {
-        alert("Por favor, ingrese un tiempo válido."); // Muestra un mensaje de alerta si el tiempo es inválido
+    if (isNaN(minutes) || minutes < 1 || minutes > 60) {
+        alert("Por favor, ingrese un tiempo válido en minutos."); // Mensaje de error si el tiempo no es válido
         return false;
     }
 
-    timeLeft = minutes * 60 + seconds;
+    timeLeft = minutes * 60; // Convierte minutos a segundos
     return true;
 }
+
 
 // Función para validar la entrada del número de preguntas
 function validateQuestionInput() {
@@ -58,21 +53,79 @@ function validateQuestionInput() {
 }
 
 // Función para cargar las preguntas desde un archivo JSON
+// Función para cargar las preguntas según el capítulo seleccionado
 function loadQuestions() {
-    fetch('questions_chap01.json')
-        .then(response => response.json())
-        .then(data => {
-            const numQuestions = parseInt(numQuestionsInput.value);
-            questions = data.sort(() => 0.5 - Math.random()).slice(0, numQuestions);
-            showQuestion();  // Muestra la primera pregunta solo después de cargar las preguntas
+    const chapterSelect = document.getElementById('chapter-select');
+    const selectedChapter = chapterSelect.value;
+    const numQuestions = parseInt(numQuestionsInput.value);
+
+    // Verifica si se seleccionaron todos los capítulos o uno específico
+    let url = selectedChapter === "all" 
+        ? `questions_chap${selectedChapter}.json` 
+        : `questions_chap${selectedChapter}.json`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`No se encontraron datos sobre el capítulo ${selectedChapter}`);
+            }
+            return response.json();
         })
-        .catch(error => console.error('Error al cargar preguntas:', error));
+        .then(data => {
+            // Si se seleccionan todos los capítulos, mezclamos preguntas de todos los archivos
+            questions = selectedChapter === "all" 
+                ? shuffleArray(data).slice(0, numQuestions)
+                : shuffleArray(data).slice(0, numQuestions);
+
+            showQuestion(); // Muestra la primera pregunta solo después de cargar las preguntas
+        })
+        .catch(error => {
+            alert(error.message);
+            resetToStart();
+        });
+}
+
+// Función para volver a la pantalla de inicio
+function resetToStart() {
+    document.getElementById('main-container').style.display = 'block';
+    questionContainer.style.display = 'none';
+    resultsContainer.style.display = 'none';
+}
+
+
+// Función para mezclar un array aleatoriamente (algoritmo de Fisher-Yates)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 // Configuración de eventos para los botones y el inicio del simulacro
 startButton.addEventListener('click', () => {
     if (validateTimeInput() && validateQuestionInput()) {
-        iframeAlert.style.display = 'block';  // Muestra la alerta previa al simulacro
+        const chapterSelect = document.getElementById('chapter-select');
+        const selectedChapter = chapterSelect.value;
+        let url = selectedChapter === "all" 
+            ? `questions_chap${selectedChapter}.json` 
+            : `questions_chap${selectedChapter}.json`;
+
+        // Verificar si el archivo de preguntas existe antes de mostrar la alerta de inicio
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`No se encontraron datos sobre el capítulo ${selectedChapter}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                questions = shuffleArray(data).slice(0, parseInt(numQuestionsInput.value));
+                iframeAlert.style.display = 'block'; // Muestra la alerta de inicio del simulacro
+            })
+            .catch(error => {
+                showErrorPopup(error.message); // Muestra el pop-up de error
+            });
     }
 });
 
@@ -220,5 +273,18 @@ function showResults() {
     }
 }
 
+// Función para mostrar el pop-up de error
+function showErrorPopup(message) {
+    const errorPopup = document.getElementById('error-popup');
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = message;
+    errorPopup.style.display = 'block'; // Muestra el pop-up
+}
+
+// Función para cerrar el pop-up de error y regresar a la pantalla de inicio
+function closeErrorPopup() {
+    document.getElementById('error-popup').style.display = 'none';
+    resetToStart(); // Regresa a la pantalla de inicio
+}
 
 restartButton.addEventListener('click', () => location.reload());
