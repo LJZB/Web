@@ -1,0 +1,232 @@
+[
+    {
+        "question": "¿Cuál es el impacto del ciclo de vida de desarrollo de software en las pruebas?",
+        "options": {
+            "1": "Determina el momento y enfoque de las pruebas",
+            "2": "Aumenta la velocidad del desarrollo",
+            "3": "Reduce la importancia de la planificación",
+            "4": "Minimiza los defectos en el software"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de las siguientes es una buena práctica de prueba aplicable a todos los ciclos de vida?",
+        "options": {
+            "1": "Realizar pruebas solo al final del desarrollo",
+            "2": "Involucrar a los probadores en las etapas tempranas",
+            "3": "Eliminar la documentación de pruebas",
+            "4": "Minimizar el tiempo destinado a las pruebas"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué enfoque busca incorporar pruebas desde las primeras etapas del desarrollo?",
+        "options": {
+            "1": "Desplazamiento a la derecha",
+            "2": "Pruebas unitarias",
+            "3": "Desplazamiento a la izquierda",
+            "4": "Pruebas de integración"
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Cuál es un beneficio de utilizar retrospectivas en las pruebas?",
+        "options": {
+            "1": "Permite identificar errores antes de la implementación",
+            "2": "Facilita la mejora continua de los procesos",
+            "3": "Optimiza el tiempo de desarrollo",
+            "4": "Minimiza el costo de las pruebas"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué nivel de prueba se enfoca en la validación de módulos individuales?",
+        "options": {
+            "1": "Pruebas de sistema",
+            "2": "Pruebas de aceptación",
+            "3": "Pruebas de componente",
+            "4": "Pruebas de integración"
+        },
+        "correctAnswer": "3"
+    },
+    {
+        "question": "¿Cuál es una característica clave de las pruebas de regresión?",
+        "options": {
+            "1": "Confirma que los cambios no introdujeron nuevos defectos",
+            "2": "Se realiza solo en la etapa de despliegue",
+            "3": "Minimiza el tiempo de desarrollo",
+            "4": "Solo incluye pruebas unitarias"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál de los siguientes es un tipo de prueba no funcional?",
+        "options": {
+            "1": "Pruebas de integración",
+            "2": "Pruebas de rendimiento",
+            "3": "Pruebas de aceptación",
+            "4": "Pruebas de unidad"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué tipo de prueba se enfoca en verificar la estabilidad y comportamiento después de un cambio?",
+        "options": {
+            "1": "Pruebas de mantenimiento",
+            "2": "Pruebas de regresión",
+            "3": "Pruebas de carga",
+            "4": "Pruebas de sistema"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿En qué etapa se realizan generalmente las pruebas de aceptación?",
+        "options": {
+            "1": "Antes de la implementación",
+            "2": "Durante la implementación",
+            "3": "Después de la integración",
+            "4": "Durante la fase de diseño"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el propósito de las pruebas de sistema?",
+        "options": {
+            "1": "Evaluar el sistema completo en un entorno de producción simulado",
+            "2": "Validar componentes individuales",
+            "3": "Asegurar la cobertura de código",
+            "4": "Solo detectar defectos en el diseño"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué nivel de prueba incluye la verificación de interacciones entre diferentes sistemas?",
+        "options": {
+            "1": "Pruebas de integración de sistemas",
+            "2": "Pruebas de aceptación",
+            "3": "Pruebas de componente",
+            "4": "Pruebas unitarias"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es una característica de las pruebas de integración?",
+        "options": {
+            "1": "Verifica la interacción entre componentes",
+            "2": "Evalúa solo módulos individuales",
+            "3": "Se realiza después de la aceptación",
+            "4": "Solo se enfoca en el rendimiento"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es un objetivo de las pruebas de confirmación?",
+        "options": {
+            "1": "Asegurar que se solucionaron defectos previamente identificados",
+            "2": "Validar el rendimiento del sistema",
+            "3": "Confirmar la funcionalidad no esencial",
+            "4": "Evaluar los procesos de diseño"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de prueba evalúa la funcionalidad en un entorno realista?",
+        "options": {
+            "1": "Pruebas de sistema",
+            "2": "Pruebas de aceptación",
+            "3": "Pruebas de integración",
+            "4": "Pruebas de carga"
+        },
+        "correctAnswer": "2"
+    },
+    {
+        "question": "¿Qué tipo de prueba se realiza para asegurar que el software sigue funcionando después de cambios?",
+        "options": {
+            "1": "Pruebas de regresión",
+            "2": "Pruebas de integración",
+            "3": "Pruebas de unidad",
+            "4": "Pruebas de rendimiento"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es una buena práctica para las pruebas en todos los ciclos de vida?",
+        "options": {
+            "1": "Pruebas tempranas",
+            "2": "Pruebas aisladas",
+            "3": "Pruebas solo al final",
+            "4": "Evitar la documentación"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es una característica de las pruebas en un enfoque de ciclo de vida ágil?",
+        "options": {
+            "1": "Repetición frecuente de pruebas",
+            "2": "Pruebas solo al final del proyecto",
+            "3": "Pruebas de alta independencia",
+            "4": "Minimizar la interacción del equipo"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de prueba asegura que los cambios no afecten las funcionalidades existentes?",
+        "options": {
+            "1": "Pruebas de regresión",
+            "2": "Pruebas de integración",
+            "3": "Pruebas de unidad",
+            "4": "Pruebas de aceptación"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el objetivo principal de las pruebas de integración?",
+        "options": {
+            "1": "Verificar la interacción entre módulos",
+            "2": "Evaluar el sistema completo",
+            "3": "Probar componentes aislados",
+            "4": "Validar la interfaz de usuario"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué tipo de prueba se centra en verificar si el sistema cumple con los requisitos?",
+        "options": {
+            "1": "Pruebas de aceptación",
+            "2": "Pruebas de integración",
+            "3": "Pruebas de unidad",
+            "4": "Pruebas de carga"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es el propósito de las pruebas de componente?",
+        "options": {
+            "1": "Verificar módulos individuales",
+            "2": "Validar el sistema en su conjunto",
+            "3": "Probar la integración de módulos",
+            "4": "Evaluar la documentación de diseño"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Qué se debe verificar durante las pruebas de mantenimiento?",
+        "options": {
+            "1": "Que el sistema sigue funcionando después de modificaciones",
+            "2": "Que el sistema cumple con nuevos requisitos",
+            "3": "Solo se prueban nuevos módulos",
+            "4": "Evaluar la interfaz de usuario"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "question": "¿Cuál es una ventaja de las pruebas en un ciclo de vida de desarrollo iterativo?",
+        "options": {
+            "1": "Permite ajustes frecuentes basados en feedback",
+            "2": "Reduce el número de pruebas necesarias",
+            "3": "Elimina la necesidad de pruebas de regresión",
+            "4": "Evita la participación del cliente"
+        },
+        "correctAnswer": "1"
+    }
+]
