@@ -18,8 +18,9 @@ body {
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    width: 320px; /* Aumenta el ancho para dar más espacio */
 }
+
 
 /* Título y descripción */
 #main-container h1 {
@@ -258,6 +259,41 @@ th, td {
 
 .popup button:hover {
     background-color: #4B8673; /* Verde oscuro */
+}
+
+/* Estilos para la rejilla de configuración */
+.config-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: 10px 20px; /* Ajusta el espacio entre filas y columnas */
+    margin-bottom: 20px; /* Espacio inferior */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+
+/* Ajuste de los elementos de configuración */
+.config-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Etiquetas alineadas con más espacio */
+.config-item label {
+    font-size: 14px;
+    color: #4B8673;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Inputs de configuración con tamaño uniforme */
+.time-input {
+    width: 100%; /* Ocupa todo el espacio disponible en su columna */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    text-align: center;
 }
 
 
