@@ -12,13 +12,16 @@ body {
 }
 
 /* Contenedor principal de la pantalla de configuración */
+/* Ajuste del contenedor principal */
 #main-container {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 320px; /* Aumenta el ancho para dar más espacio */
+    max-width: 500px; /* Ancho máximo */
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    margin: 20px auto; /* Centrado y espacio superior e inferior */
 }
 
 
